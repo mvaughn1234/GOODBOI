@@ -31,6 +31,7 @@ def Maze():
 			z = ssweep(g[lpos[0],lpos[1]][-1,1])
 			snextdir(z,g[lpos[0],lpos[1]][-1,1],g,cpos,s1,s2)
 			smartmove(g[lpos[0],lpos[1]][-1,1],cpos,lpos,s1,s2)
+		fblink()
 
 
 
@@ -119,3 +120,9 @@ def smartmove (h,cp,lp,sone,stwo)
 		p.drive_inches(24)
 		lp = [2,4]
 		cp = [1,4]
+def fblink():
+	p.set_eye_color((0,255,0))
+	for i in range 3:
+		p.open_eyes()
+		time.sleep(.2)
+		p.close_eyes()
