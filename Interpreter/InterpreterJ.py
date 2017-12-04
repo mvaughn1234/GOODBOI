@@ -69,24 +69,24 @@ def cread(die,cam): #Will continuously move in the correct direction until a "go
 	p.stop()
 def fblink(x,y): #Blink function (box index,reading)
 	for i in range(x): #Index with red blinks
-		p.set_eye_color(255,0,0)
+		p.set_eye_color((255,0,0))
 		p.open_eyes()
-		delay(200)
+		time.sleep(.2)
 		p.close_eyes()
 	for i in range(y):
-		p.set_eye_color(0,0,255)
+		p.set_eye_color((0,0,255))
 		p.open_eyes()
-		delay(200)
+		time.sleep(.2)
 		p.close_eyes()
 def dwink(g):
-	p.set_eye_color(255,255,255)
+	p.set_eye_color((255,255,255))
 	if g == 1:
 		p.open_right_eye()
-		delay(200)
+		time.sleep(.2)
 		p.close_right_eye()
 	elif g==-1:
 		p.open_left_eye()
-		delay(200)
+		time.sleep(.2)
 		p,close_left_eye()
 
 Interpreter()
